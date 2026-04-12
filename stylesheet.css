@@ -1,0 +1,398 @@
+
+
+:root {
+  --primary: #b6ff00;
+  --bg: #0a0a0a;
+  --card: #111;
+  --text: #ccc;
+}
+
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
+}
+
+.titlename h1 {
+  font-size: clamp(24px, 6vw, 48px);
+  color: #b6ff00;
+
+
+}
+
+
+header {
+    display:flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+  background-color: #333;
+  color:red;
+  padding: 20px;
+  background: rgba(50, 50, 50, 0.9);
+  backdrop-filter: blur(5px);
+
+}
+nav ul {
+  list-style: none;     
+  display: flex;   
+  gap:30px;      
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-left: 30px;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.logo {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+#gymname {
+  display: flex;
+  align-items: center;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    animation: slideIn 1s ease-out forwards;
+}
+
+
+
+body {
+   background: linear-gradient(to bottom, #000, #222);
+   background-color: black;
+   background:  var(--bg);
+   color: var(--text);
+    margin: 0;
+    padding: 20px;
+}
+.blackbg{
+
+
+ background: linear-gradient(to bottom, #000, #222);
+
+}
+.titlename {
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    font-size: 30px;
+    color: var(--primary);
+    text-align: center;
+    font-weight: 100;
+    background-color: black;
+    font-family: 'Arial Black', Arial, sans-serif;
+    position: relative;
+}
+
+.main-ad {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#sliderheader {
+    color: var(--primary);
+    font-size: 48px;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Orbitron', sans-serif;
+     text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    letter-spacing: 6px;
+     animation: slideIn 1s ease-out forwards  ;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slider {
+  position: relative;
+  width: 70%;
+  height: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+pre {
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: center ;
+}
+#main-title span {
+  opacity: 0;
+  display: inline-block;
+  transform: translateX(-20px);
+  animation: letterFade 0.4s ease forwards;
+}
+
+@keyframes letterFade {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.titlename span:nth-child(1) { animation-delay: 0s; }
+.titlename span:nth-child(2) { animation-delay: 0.05s; }
+.titlename span:nth-child(3) { animation-delay: 0.1s; }
+.titlename span:nth-child(4) { animation-delay: 0.15s; }
+
+.titlename span:nth-child(10) { animation-delay: 0.5s; }
+.titlename span:nth-child(20) { animation-delay: 1s; }
+
+
+
+
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin: 80px auto;
+}
+
+
+.Features1 {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+
+.Features2 {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+
+.Features1 div,
+.Features2 div {
+  width: 280px;
+  background: #111;
+  padding: 40px 20px;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 0 20px rgba(182,255,0,0.05);
+}
+
+
+.Features1 div:hover,
+.Features2 div:hover {
+  transform: translateY(-10px);
+}
+
+
+.Features1 i,
+.Features2 i {
+  color: #b6ff00;
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+
+.Features1 p,
+.Features2 p {
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .Features1,
+  .Features2 {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/*
+.modern-equipments{
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+
+.Trainer{
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+.Nutrition{
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+.Economical-Plans{
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+.Community{
+display: flex;
+flex-direction: column;
+align-items: center;
+
+} */
+
+h4 {
+    display: flex;
+    justify-content: flex-start;
+    color: var(--primary);
+    font-size: 20px;
+    margin-top: 40px;
+    font-family: 'Arial Black', Arial, sans-serif;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.social-icons {
+    margin-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    width:5%;
+    margin-top: 0px;
+
+}
+
+
+footer {
+  width:100%;
+  text-align: center ;
+  color:aliceblue;
+  font-size: 14px;
+  padding: 20px 0;
+}
+
+.programmes {
+  background: linear-gradient(to bottom, #000, #222);
+  color: white;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.programmes h2 {
+  color: yellow;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.highlight {
+  color: yellow;
+  font-weight: bold;
+}
+
+.pricing {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.pricing h1 {
+  font-size: 48px;
+  margin: 5px;
+}
+
+.strike {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.practice-time,
+.membership,
+.personal-training,
+.notes,
+.fees {
+  margin: 25px 0;
+}
+
+h3 {
+  color: yellow;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 8px 0;
+  font-size: 18px;
+  gap:30px;
+}
+
+.fees p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+/*optimising for smaller screens like mobiles and tablets*/
+
+
+
+
+@media (max-width: 768px) {
+  .slider {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+}
