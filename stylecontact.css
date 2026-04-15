@@ -150,11 +150,53 @@ footer {
   font-size: 14px;
   padding: 20px 0;
 }
+#gymname p {
+  margin: 0;
+  text-align: center;
+}
+
 
 @media (max-width: 768px) {
-  .slider {
-    width: 100%;
+
+  
+  header {
+    flex-direction: column;
     height: auto;
-    aspect-ratio: 16/9;
+    gap: 10px;
+    padding: 10px;
   }
+
+  .logo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #gymname pre {
+    white-space: normal;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .contact-info,
+  .form-box {
+    width: 100%;
+  }
+
+ 
+  input, select, textarea {
+    width: 100%;
+  }
+
 }
